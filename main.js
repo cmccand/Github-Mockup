@@ -8,14 +8,14 @@
 
 renderProfile: function() {
  var prof = _.template(templates.profile);
- $('body').append(prof);
+ $('.profile').append(prof);
 },
 
  /*var Reponame = _.map(Repo, _.iteratee('name'));*/
  addRepo: function (Repo, index, array) {
    Repo.idx = index;
    var compiled = _.template(templates.Repo);
-   $('body').append(compiled(Repo));
+   $('.repo').append(compiled(Repo));
 
  },
 
@@ -24,15 +24,10 @@ renderProfile: function() {
 
  },
 
- renderActivity: function (Activity, index, array) {
+ allActivity: function (Activity, index, array) {
    Activity.idx = index;
    var Act = _.template(templates.Activity);
-   $('body').append(Act(Activity));
-
- },
-
- allActivity: function(activityInfo) {
-   activityInfo.forEach(GitReal.renderActivity);
+   $('.activity').append(Act(Activity));
 
  }
 
@@ -41,5 +36,15 @@ renderProfile: function() {
 $(document).ready(function(){
 
 GitReal.init();
+
+$('.activeClass a').click(function(event){
+  event.preventDefault();
+
+  var relatedClass = "." + $(this).attr('rel');
+  $(this).closest('li').siblings().removeClass('activeNav');
+  $(this).closest('li').addClass('activeNav');
+  $(relatedClass).siblings().removeClass('active');
+  $(relatedClass).addClass('active');
+});
 
 });

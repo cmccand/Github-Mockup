@@ -1,0 +1,65 @@
+.reponame {
+  color: #4183c4;
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: bold; }
+
+header {
+  height: 30px; }
+
+header li, a {
+  color: #333333;
+  font-size: 14px;
+  display: inline-block;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-decoration: none; }
+
+header a:hover {
+  color: #333333;
+  font-size: 14px;
+  display: inline-block;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-decoration: none;
+  color: #4183c4; }
+
+header ul {
+  list-style-type: none; }
+
+section {
+  width: 60%;
+  display: inline-block; }
+
+.activity, .repo {
+  display: none; }
+
+.active {
+  display: inline-block;
+  width: 100%; }
+
+.activeNav a {
+  color: #4183c4;
+  text-decoration: underline; }
+
+.navbar ul {
+  list-style-type: none; }
+  .navbar ul li, .navbar ul a {
+    display: inline-block;
+    text-decoration: none; }
+
+.profile {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top; }
+  .profile img {
+    width: 50%;
+    height: 220px; }
+
+.tinyPic {
+  width: 20px;
+  height: 20px; }
+
+.bigPic {
+  width: 40px;
+  height: 40px; }

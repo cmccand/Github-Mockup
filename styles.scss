@@ -1,0 +1,90 @@
+$gitblue: #4183c4;
+$gitgray: #333333;
+
+@mixin navstyle () {
+  color: $gitgray;
+  font-size: 14px;
+  display: inline-block;
+  font-family: Helvetica;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+@mixin repostyle () {
+  color: $gitblue;
+  font-size:24px;
+  font-family: Helvetica;
+  font-weight:bold;
+}
+
+.reponame {
+  @include repostyle;
+}
+
+header {
+  height:30px;
+}
+
+header li, a {
+  @include navstyle ();
+}
+
+header a:hover {
+  @include navstyle ();
+  color: $gitblue;
+}
+
+header ul {
+  list-style-type:none;
+}
+
+section {
+  width:60%;
+  display:inline-block;
+}
+
+.activity, .repo {
+  display: none;
+}
+
+.active {
+  display: inline-block;
+  width:100%;
+}
+
+.activeNav a {
+  color: $gitblue;
+  text-decoration: underline;
+}
+
+.navbar {
+  ul {
+    list-style-type: none;
+    li,a {
+      display:inline-block;
+      text-decoration:none;
+    }
+  }
+}
+
+.profile {
+  width:35%;
+  display:inline-block;
+  vertical-align:top;
+  img {
+    width:50%;
+    height:220px;
+  }
+}
+
+
+
+.tinyPic {
+  width:20px;
+  height:20px;
+}
+
+.bigPic {
+  width:40px;
+  height:40px;
+}
